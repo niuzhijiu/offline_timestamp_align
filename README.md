@@ -37,3 +37,6 @@ timestamp_correct.cpp：时间戳修正
 publish_node.cpp：ROS发布节点
 fusion_node.cpp：ROS信息融合节点
 
+## 文件依赖关系示意图
+![file dependency](file_dependency.png)
+
