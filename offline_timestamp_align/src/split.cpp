@@ -243,8 +243,8 @@ int main(int argc, char** argv) {
 
     try {
         //配置路径
-        string BAG_PATH = "/home/slam/euroc_bag_split/MH_01_easy.bag";          //要分解的bag文件路径
-        string OUTPUT_ROOT = "/home/slam/offline_timestamp_align_test";    //分解后的输出目录
+        string BAG_PATH = "/home/slam/euroc_bag_split/V1_01_easy.bag";          //要分解的bag文件路径
+        string OUTPUT_ROOT = "/home/slam/20251205_test";    //分解后的输出目录
 
         //初始化分解器并执行
         EurocBagSplitter splitter(BAG_PATH, OUTPUT_ROOT);

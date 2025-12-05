@@ -160,9 +160,9 @@ int main(int argc, char** argv) {
 
     //读取路径
     std::string cam_csv_path, image_dir, imu_csv_path;
-    nh.param<std::string>("cam_csv", cam_csv_path, "/home/slam/offline_timestamp_align_test/cam0_aligned.csv");
-    nh.param<std::string>("image_dir", image_dir, "/home/slam/offline_timestamp_align_test/cam0/");
-    nh.param<std::string>("imu_csv", imu_csv_path, "/home/slam/offline_timestamp_align_test/imu0_data.csv");
+    nh.param<std::string>("cam_csv", cam_csv_path, "/home/slam/20251205_test/cam0_aligned.csv");
+    nh.param<std::string>("image_dir", image_dir, "/home/slam/20251205_test/cam0/");
+    nh.param<std::string>("imu_csv", imu_csv_path, "/home/slam/20251205_test/imu0_data.csv");
 
     //两个publisher发布topic，队列大小设定的大，避免丢包
     ros::Publisher pub_cam = nh.advertise<sensor_msgs::Image>("/cam_image", 100);

@@ -5,8 +5,8 @@
   <!-- 发布节点：延迟1秒再启动,要不然同时启动会可能丢信息，在publish.cpp里发布逻辑和这里作双保险以保证信息传输的完整性 -->
   <node name="publish_node" pkg="offline_timestamp_align" type="publish_node" output="screen"
         launch-prefix="bash -c 'sleep 1; $0 $@' ">
-    <param name="cam_csv" value="/home/slam/offline_timestamp_align_test/cam0_aligned.csv"/>
-    <param name="image_dir" value="/home/slam/offline_timestamp_align_test/cam0/"/>
-    <param name="imu_csv" value="/home/slam/offline_timestamp_align_test/imu0_data.csv"/>
+    <param name="cam_csv" value="/home/slam/20251205_test/cam0_aligned.csv"/>
+    <param name="image_dir" value="/home/slam/20251205_test/cam0/"/>
+    <param name="imu_csv" value="/home/slam/20251205_test/imu0_data.csv"/>
   </node>
 </launch>

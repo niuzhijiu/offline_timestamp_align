@@ -7,7 +7,7 @@
 
 #include <vector>
 #include <string>
-#include <csignal>   // for signal handling
+#include <csignal>   
 
 //定义一个FusionNode类，把节点的状态和回调封装起来
 class FusionNode {
