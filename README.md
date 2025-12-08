@@ -40,3 +40,5 @@ fusion_node.cpp：ROS信息融合节点
 ## 文件依赖关系示意图
 ![file dependency](file_dependency.png)
 
+## 节点及话题通信示意图
+![file dependency](node_and_topic_communication.png)
