@@ -43,7 +43,7 @@ std::vector<CamData> readCamCsv(const std::string& filename) {
     return data;
 }
 
-//修正，然后保存修正后的 CSV
+//对时间戳进行修正，然后保存修正后的 CSV
 void saveAlignedCsv(const std::string& filename, const std::vector<CamData>& data, double bias) {
     //创建输出文件流，关联到目标保存路径并检查成功与否
     std::ofstream file(filename);
@@ -62,11 +62,11 @@ void saveAlignedCsv(const std::string& filename, const std::vector<CamData>& dat
 
 int main() {
     //偏移量b
-    double b = -0.007;  
+    double b = -0.008;  
 
     //输入输出文件路径
-    std::string cam_csv = "/home/slam/20251205_test/cam0_timestamp.csv";
-    std::string cam_aligned_csv = "/home/slam/20251205_test/cam0_aligned.csv";
+    std::string cam_csv = "/home/slam/20251210/cam0_timestamp.csv";
+    std::string cam_aligned_csv = "/home/slam/20251210/cam0_aligned.csv";
 
     //读取CSV
     auto data = readCamCsv(cam_csv);

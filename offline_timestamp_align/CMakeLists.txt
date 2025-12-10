@@ -71,12 +71,12 @@ add_executable(split src/split.cpp)
 ## 保证消息生成在编译前完成
 add_dependencies(publish_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(fusion_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(cam_w_norm_calculate ${catkin_EXPORTED_TARGETS})
-add_dependencies(time_offset_calculate_portion ${catkin_EXPORTED_TARGETS})
-add_dependencies(time_offset_calculate_norm ${catkin_EXPORTED_TARGETS})
-add_dependencies(imu_w_norm_calculate ${catkin_EXPORTED_TARGETS})
-add_dependencies(timestamp_correct ${catkin_EXPORTED_TARGETS})
-add_dependencies(split ${catkin_EXPORTED_TARGETS})
+add_dependencies(cam_w_norm_calculate ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(time_offset_calculate_portion ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(time_offset_calculate_norm ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(imu_w_norm_calculate ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(timestamp_correct ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(split ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## 链接库
 target_link_libraries(publish_node

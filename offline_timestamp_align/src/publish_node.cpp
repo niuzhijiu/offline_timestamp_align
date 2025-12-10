@@ -5,7 +5,6 @@
 #include <geometry_msgs/Vector3.h>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/opencv.hpp>
-
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -153,16 +152,16 @@ std::vector<ImuData> loadImuCsv(const std::string& path) {
 }
 
 int main(int argc, char** argv) {
-    //节点名为pub_node
+    //节点名为publish_node
     ros::init(argc, argv, "publish_node");
     //使用私有命名空间读取参数
     ros::NodeHandle nh("~");
 
     //读取路径
     std::string cam_csv_path, image_dir, imu_csv_path;
-    nh.param<std::string>("cam_csv", cam_csv_path, "/home/slam/20251205_test/cam0_aligned.csv");
-    nh.param<std::string>("image_dir", image_dir, "/home/slam/20251205_test/cam0/");
-    nh.param<std::string>("imu_csv", imu_csv_path, "/home/slam/20251205_test/imu0_data.csv");
+    nh.param<std::string>("cam_csv", cam_csv_path, "/home/slam/20251210/cam0_aligned.csv");
+    nh.param<std::string>("image_dir", image_dir, "/home/slam/20251210/cam0/");
+    nh.param<std::string>("imu_csv", imu_csv_path, "/home/slam/20251210/imu0_data.csv");
 
     //两个publisher发布topic，队列大小设定的大，避免丢包
     ros::Publisher pub_cam = nh.advertise<sensor_msgs::Image>("/cam_image", 100);
@@ -190,8 +189,8 @@ int main(int argc, char** argv) {
     ROS_INFO("Subscribers detected on both topics, start publishing!");
 
     size_t i = 0, j = 0;
-    //发送数据
-    ros::Rate loop_rate(400); 
+    //发送数据，设置250为频率期望上限，不占用过多的资源也能保证随到随发
+    ros::Rate loop_rate(250); 
 
     //检测数据是不是全部发送出去了，只要还有任意一种数据没发完，就继续循环，发布时间戳在前的数据，时间戳相同先发布相机的
     while (ros::ok() && (i < cam_data.size() || j < imu_data.size())) {

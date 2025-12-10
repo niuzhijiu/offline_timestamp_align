@@ -2,11 +2,14 @@
 <package format="2">
   <name>offline_timestamp_align</name>
   <version>0.0.0</version>
-  <description>The offline_timestamp_align package</description>
+  <description>
+    A ROS1 (Noetic) package for offline timestamp alignment of camera and IMU data.
+    Designed for ROS beginners (master students) to learn core ROS concepts:
+    nodes, topics, custom messages, parameter server, and sensor data fusion.
+  </description>
 
-  <maintainer email="slam@todo.todo">slam</maintainer>
-  <license>TODO</license>
-
+  <license>MIT</license>
+  <maintainer email="283275126@qq.com">niuzhijiu</maintainer>
   <buildtool_depend>catkin</buildtool_depend>
 
   <!-- 编译时依赖 -->
@@ -16,9 +19,10 @@
   <build_depend>sensor_msgs</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>message_generation</build_depend>
-  <build_depend>opencv2</build_depend>
+  <build_depend>opencv</build_depend> 
   <build_depend>rosbag</build_depend>
-  <build_depend>image_transport</build_depend> 
+  <build_depend>image_transport</build_depend>
+  <build_depend>boost</build_depend> 
 
   <!-- 导出依赖 -->
   <build_export_depend>cv_bridge</build_export_depend>
@@ -26,9 +30,10 @@
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>sensor_msgs</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
-  <build_export_depend>opencv2</build_export_depend>
+  <build_export_depend>opencv</build_export_depend> 
   <build_export_depend>rosbag</build_export_depend>
-  <build_export_depend>image_transport</build_export_depend> 
+  <build_export_depend>image_transport</build_export_depend>
+  <build_export_depend>boost</build_export_depend> 
 
   <!-- 运行时依赖 -->
   <exec_depend>cv_bridge</exec_depend>
@@ -37,11 +42,11 @@
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>message_runtime</exec_depend>
-  <exec_depend>opencv2</exec_depend>
+  <exec_depend>opencv</exec_depend> 
   <exec_depend>rosbag</exec_depend>
-  <exec_depend>image_transport</exec_depend>  
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>boost</exec_depend> 
 
   <export>
   </export>
 </package>
-
