@@ -4,24 +4,24 @@
 一个帮助初学者熟悉ROS1的noetic版本和时间标定的离线时间戳粗对齐项目
 
 ## 目录结构
-offline_timestamp_align/
-├── CMakeLists.txt
-├── include/
-│   └── offline_timestamp_align/
-├── launch/
-│   └── offline_timestamp_align.launch
-├── msg/
-│   └── FusedState.msg
-├── package.xml
-└── src/
-    ├── cam_w_norm_calculate.cpp
-    ├── fusion_node.cpp
-    ├── imu_w_norm_calculate.cpp
-    ├── publish_node.cpp
-    ├── split.cpp
-    ├── time_offset_calculate_norm.cpp
-    ├── time_offset_calculate_portion.cpp
-    └── timestamp_correct.cpp
+offline_timestamp_align
+    ├── CMakeLists.txt
+    ├── include
+    │   └── offline_timestamp_align
+    ├── launch
+    │   └── offline_timestamp_align.launch
+    ├── msg
+    │   └── FusedState.msg
+    ├── package.xml
+    └── src
+        ├── cam_w_norm_calculate.cpp
+        ├── fusion_node.cpp
+        ├── imu_w_norm_calculate.cpp
+        ├── publish_node.cpp
+        ├── split.cpp
+        ├── time_offset_calculate_norm.cpp
+        ├── time_offset_calculate_portion.cpp
+        └── timestamp_correct.cpp
     
 ## 文件功能简介    
 CMakeLists.txt：声明编译规则
