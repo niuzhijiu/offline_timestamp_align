@@ -4,6 +4,7 @@
 一个帮助初学者熟悉ROS1的noetic版本和时间标定的离线时间戳粗对齐项目
 
 ## 目录结构
+```
 offline_timestamp_align
     ├── CMakeLists.txt
     ├── include
@@ -22,6 +23,7 @@ offline_timestamp_align
         ├── time_offset_calculate_norm.cpp
         ├── time_offset_calculate_portion.cpp
         └── timestamp_correct.cpp
+```
 
 ## 文件功能简介    
 CMakeLists.txt：声明编译规则
