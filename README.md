@@ -4,16 +4,16 @@
 一个帮助初学者熟悉ROS1的noetic版本和时间标定的离线时间戳粗对齐项目
 
 ## 目录结构
-offline_timestamp_align
+offline_timestamp_align/
     ├── CMakeLists.txt
-    ├── include
-    │   └── offline_timestamp_align
-    ├── launch
+    ├── include/
+    │   └── offline_timestamp_align/
+    ├── launch/
     │   └── offline_timestamp_align.launch
-    ├── msg
+    ├── msg/
     │   └── FusedState.msg
     ├── package.xml
-    └── src
+    └── src/
         ├── cam_w_norm_calculate.cpp
         ├── fusion_node.cpp
         ├── imu_w_norm_calculate.cpp
