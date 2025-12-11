@@ -26,7 +26,7 @@ offline_timestamp_align
 ## 文件功能简介    
 CMakeLists.txt：声明编译规则
 package.xml：声明依赖和包的基本信息
-offline_timestamp_align.launch：一键启动ROS相关的发布和订阅节点
+offline_timestamp_align.launch：一键启动ROS相关的发布和融合节点
 FusedState.msg：定义融合后发布的消息
 split.cpp：对bag文件进行拆解
 cam_w_norm_calculate.cpp：计算三轴视觉角速度及模值
