@@ -26,20 +26,18 @@ offline_timestamp_align
 ```
 
 ## 文件功能简介
-```    
-CMakeLists.txt：声明编译规则
-package.xml：声明依赖和包的基本信息
-offline_timestamp_align.launch：一键启动ROS相关的发布和融合节点
-FusedState.msg：定义融合后发布的消息
-split.cpp：对bag文件进行拆解
-cam_w_norm_calculate.cpp：计算三轴视觉角速度及模值
-imu_w_norm_calculate.cpp：计算IMU角速度模值
-time_offset_calculate_norm.cpp：凭借角速度模值估算时间偏移
-time_offset_calculate_portion.cpp：凭借三轴角速度估算时间偏移
-timestamp_correct.cpp：时间戳修正
-publish_node.cpp：ROS发布节点
-fusion_node.cpp：ROS信息融合节点
-```
+CMakeLists.txt：声明编译规则  
+package.xml：声明依赖和包的基本信息  
+offline_timestamp_align.launch：一键启动ROS相关的发布和融合节点  
+FusedState.msg：定义融合后发布的消息  
+split.cpp：对bag文件进行拆解  
+cam_w_norm_calculate.cpp：计算三轴视觉角速度及模值  
+imu_w_norm_calculate.cpp：计算IMU角速度模值  
+time_offset_calculate_norm.cpp：凭借角速度模值估算时间偏移  
+time_offset_calculate_portion.cpp：凭借三轴角速度估算时间偏移  
+timestamp_correct.cpp：时间戳修正  
+publish_node.cpp：ROS发布节点  
+fusion_node.cpp：ROS信息融合节点  
 
 ## 文件依赖关系示意图
 ![file dependency](file_dependency.png)
