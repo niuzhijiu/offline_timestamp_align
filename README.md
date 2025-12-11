@@ -25,7 +25,8 @@ offline_timestamp_align
         └── timestamp_correct.cpp
 ```
 
-## 文件功能简介    
+## 文件功能简介
+```    
 CMakeLists.txt：声明编译规则
 package.xml：声明依赖和包的基本信息
 offline_timestamp_align.launch：一键启动ROS相关的发布和融合节点
@@ -38,6 +39,7 @@ time_offset_calculate_portion.cpp：凭借三轴角速度估算时间偏移
 timestamp_correct.cpp：时间戳修正
 publish_node.cpp：ROS发布节点
 fusion_node.cpp：ROS信息融合节点
+```
 
 ## 文件依赖关系示意图
 ![file dependency](file_dependency.png)
