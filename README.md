@@ -7,8 +7,6 @@
 ```
 offline_timestamp_align
     ├── CMakeLists.txt
-    ├── include
-    │   └── offline_timestamp_align
     ├── launch
     │   └── offline_timestamp_align.launch
     ├── msg
